@@ -1,0 +1,108 @@
+<mat-toolbar class="custom-toolbar">
+  <div>
+    <button mat-button [routerLink]="['/homes']" style="color: white">
+      <mat-icon>home</mat-icon>Home
+    </button>
+  </div>
+  <div>
+    <button
+      mat-button
+      [matMenuTriggerFor]="menuEmpleos"
+      class="btn-skyblue-dark"
+    >
+      <mat-icon>work_outline</mat-icon>
+      Empleos
+    </button>
+  </div>
+
+  <div>
+    <button mat-button [matMenuTriggerFor]="menuRoles" class="btn-skyblue-dark">
+      <mat-icon>person_outline</mat-icon>
+      Roles
+    </button>
+  </div>
+
+  <div>
+    <button
+      mat-button
+      [matMenuTriggerFor]="menuUbicacion"
+      class="btn-skyblue-dark"
+    >
+      <mat-icon>location_on</mat-icon>
+      Ubicación
+    </button>
+  </div>
+
+  <div>
+    <button
+      mat-button
+      [matMenuTriggerFor]="menuReserva"
+      class="btn-skyblue-dark"
+    >
+      <mat-icon>bookmark</mat-icon>
+      Reservación
+    </button>
+  </div>
+
+  <span class="toolbar-spacer"></span>
+ <div class="right-menu">
+    <button mat-button [matMenuTriggerFor]="menuSalir" >
+      <mat-icon>person</mat-icon>Usuario
+    </button>
+ </div>
+
+
+ 
+  <mat-menu #menuEmpleos="matMenu">
+    <button mat-menu-item routerLink="/empleos">Listar</button>
+    <button mat-menu-item routerLink="/empleos/registrar-editar">
+      Registrar
+    </button>
+    <button mat-menu-item routerLink="/empleos/busquedas">
+      Buscar por Nombre
+    </button>
+  </mat-menu>
+
+  <mat-menu #menuRoles="matMenu">
+    <button mat-menu-item routerLink="/roles">Listar</button>
+    <button mat-menu-item routerLink="/roles/registrar-editar">
+      Registrar
+    </button>
+    <button mat-menu-item routerLink="/roles/busquedas">
+      Buscar por Nombre
+    </button>
+  </mat-menu>
+
+  <mat-menu #menuUbicacion="matMenu">
+    <button mat-menu-item routerLink="/ubicaciones">Listar</button>
+    <button mat-menu-item routerLink="/ubicaciones/registrar-editar">
+      Registrar
+    </button>
+    <button mat-menu-item routerLink="/ubicaciones/busquedas">
+      Buscar por Dirección
+    </button>
+    <button mat-menu-item routerLink="/ubicaciones/geolocalizacion">
+      <mat-icon>map</mat-icon>Geolocalizar Ubicación
+    </button>
+  </mat-menu>
+
+  <mat-menu #menuReserva="matMenu">
+    <button mat-menu-item routerLink="/reservas">Listar</button>
+    <button mat-menu-item routerLink="/reservas/registrar-editar">
+      Registrar
+    </button>
+    <button mat-menu-item routerLink="/reservas/busquedas">
+      Buscar por Fecha
+    </button>
+  </mat-menu>
+  <mat-menu #menuSalir="matMenu">
+    <button mat-menu-item routerLink="/login" (click)="cerrar()">
+      <mat-icon>logout</mat-icon>
+      <span>Cerrar sesión</span>
+    </button>
+    <button mat-menu-item>
+      Rol:
+      <span>{{ role }}</span>
+    </button>
+  </mat-menu></mat-toolbar
+>

@@ -1,0 +1,80 @@
+<div class="container">
+  <div style="text-align: center; margin: 5%">
+    <h1>Registro de ubicaciones</h1>
+  </div>
+
+  <div style="text-align: center; margin: 5%">
+    <form [formGroup]="form" (submit)="aceptar()">
+      <!-- formGroup es parte del import: ReactiveForms-->
+
+      <mat-form-field class="example-full-width" *ngIf="actualizamos">
+        <mat-label>ID</mat-label>
+        <input matInput formControlName="codigo" />
+
+        <mat-error *ngIf="form.get('codigo')?.hasError('required')">
+          El codigo es obligatorio! 7.7
+        </mat-error>
+      </mat-form-field>
+
+      <br />
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Dirección</mat-label>
+        <input
+          matInput
+          placeholder="Ingrese la dirección"
+          formControlName="addressUbi"
+        />
+        <mat-error *ngIf="form.get('addressUbi')?.hasError('required')">
+          La dirección es obligatoria! 7.7
+        </mat-error>
+      </mat-form-field>
+
+      <br />
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Latitud</mat-label>
+        <input
+          matInput
+          placeholder="Ingrese la dirección"
+          formControlName="latitudeUbi"
+        />
+        <mat-error *ngIf="form.get('latitudeUbi')?.hasError('required')">
+          La latitud es obligatoria! 7.7
+        </mat-error>
+      </mat-form-field>
+
+      <br />
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Longitud</mat-label>
+        <input
+          matInput
+          placeholder="Ingrese la dirección"
+          formControlName="lengthUbi"
+        />
+        <mat-error *ngIf="form.get('lengthUbi')?.hasError('required')">
+          La longitud es obligatoria! 7.7
+        </mat-error>
+      </mat-form-field>
+
+      <br />
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Google Maps Link</mat-label>
+        <input
+          matInput
+          placeholder="Ingrese la dirección"
+          formControlName="linkUbi"
+        />
+        <mat-error *ngIf="form.get('linkUbi')?.hasError('required')">
+          El enlace de San Google Maps es obligatorio! 7.7
+        </mat-error>
+      </mat-form-field>
+
+      <br />
+
+      <button matButton="filled">Aceptar</button>
+    </form>
+  </div>
+</div>

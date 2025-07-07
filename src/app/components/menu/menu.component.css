@@ -1,0 +1,44 @@
+
+.custom-toolbar {
+
+ background-color: skyblue; /* rojo */
+
+}
+
+
+.btn-skyblue-dark {
+
+ background-color: rgb(109, 172, 197);
+
+ border-radius: 4px;
+
+ margin: 4px;
+
+ border: none;
+
+}
+
+.custom-toolbar button,
+
+.custom-toolbar mat-icon {
+
+ color: white;
+
+}
+
+/*Lista*/
+button[mat-raised-button] {
+
+ background-color: white;
+
+ border: none;
+
+ width: 50%;
+
+ box-shadow: none;   
+
+ outline: none; 
+
+ color: rgb(255, 20, 20);    
+
+}

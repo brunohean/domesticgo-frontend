@@ -1,0 +1,28 @@
+.contenedor-flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 2rem;
+    margin: 0 5%;
+    flex-wrap: wrap;
+  }
+
+  .tabla-container {
+    flex: 1;
+    max-width: 35%;
+    min-width: 300px;
+  }
+
+  .mapa-container {
+    flex: 2;
+    min-width: 300px;
+    width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    .tabla-container,
+    .mapa-container {
+      max-width: 100%;
+      flex: 100%;
+    }
+  }

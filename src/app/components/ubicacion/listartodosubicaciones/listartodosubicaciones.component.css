@@ -1,0 +1,43 @@
+/* Aplica estilo general a la tabla */
+table.mat-elevation-z8 {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fafafa;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Estilo para encabezados */
+.mat-header-cell {
+  background-color: #3f51b5;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Estilo para celdas */
+.mat-cell {
+  font-size: 15px;
+  padding: 12px;
+  text-align: center;
+  color: #333;
+}
+
+/* Zebra striping: filas impares con fondo diferente */
+.mat-row:nth-child(odd) {
+  background-color: #f5f5f5;
+}
+
+/* Efecto hover */
+.mat-row:hover {
+  background-color: #e3f2fd;
+  cursor: pointer;
+}
+
+/* Título de la tabla */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #3f51b5;
+}

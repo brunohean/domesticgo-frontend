@@ -1,0 +1,6 @@
+<router-outlet></router-outlet>
+<div [hidden]="route.children.length !== 0">
+  <!-- Este deriba a la app component listar aplicacion, SIEMPRE Y CUANDO no haya implementado el archivo app.routes.ts 
+        Si se ingresa la ruta por defecto 'localhost:4200' mostrar error porque no se le ha asignado un componente. -->
+  <app-listartodosempleos></app-listartodosempleos>
+</div>

@@ -1,0 +1,184 @@
+<header>
+  <div class="container">
+    <p class="logo">DomestiGo</p>
+    <nav>
+      <a href="#hero">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#consultas">Contactos</a>
+      <a href="#trabajarcon">Trabaja con nosotros</a>
+      <button matFab [routerLink]="['/login']">
+        <mat-icon>favorite</mat-icon> API
+      </button>
+    </nav>
+  </div>
+</header>
+<section id="hero">
+  <div class="container">
+    <div class="img-container"></div>
+    <div class="texto1">
+      <h1>La confianza y seguridad es lo primero</h1>
+      <h4>
+        Con DomestiGo, te podemos ayudar brindándote servicios domésticos con
+        trabajadores altamente calificados, para asegurar su seguridad
+      </h4>
+      <button>Descargar</button>
+    </div>
+  </div>
+</section>
+<section id="servicios">
+  <div class="container">
+    <h2>¿Qué servicios brindamos?</h2>
+    <div class="programas">
+      <div class="carta">
+        <h4>Fontanería</h4>
+      </div>
+      <div class="carta">
+        <h4>Electricista</h4>
+      </div>
+      <div class="carta">
+        <h4>Servicio de Limpieza</h4>
+      </div>
+      <div class="carta">
+        <h4>Carpintería</h4>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="extra1">
+  <div class="container">
+    <div>
+      <p>
+        Estos son algunos servicios domésticos de la amplia variedad que
+        brindamos a nuestros clientes.
+      </p>
+      <p>
+        Si deseas mayor información acerca de nuestro catálago de servicios,
+        contáctese con nosotros.
+      </p>
+      <div class="img-container"></div>
+      <button>Contactar ahora</button>
+      <p></p>
+      <img [src]="'assets/img/2.JPG'" />
+      <p>Contáctese con nosotros llenando el formulario de la derecha.</p>
+      <p>
+        Le haremos llegar una respuesta lo más pronto posible mediante su correo
+        electrónico.
+      </p>
+      <img [src]="'assets/img/3.JPG'" />
+    </div>
+  </div>
+</section>
+<section id="consultas">
+  <div class="container">
+    <div class="img-container"></div>
+    <h3>Formulario de consultas</h3>
+    <input type="text" name="nombre" id="nombre" placeholder="Nombre*" />
+    <input type="text" name="apellido" id="apellido" placeholder="Apellido*" />
+    <br />
+    <br />
+    <input
+      type="text"
+      name="correo"
+      id="correo"
+      placeholder="Correo electrónico*"
+    />
+    <br />
+    <br />
+    <input type="text" name="telefono" id="telefono" placeholder="Teléfono*" />
+    <input
+      type="text"
+      name="servicio"
+      id="servicio"
+      placeholder="Servicio requerido*"
+    />
+    <br />
+    <br />
+    <input
+      type="text"
+      name="comentario"
+      id="comentario"
+      placeholder="Comentario adicional*"
+    />
+    <br />
+    <br />
+    <button>Enviar formulario</button>
+  </div>
+</section>
+<section id="extra1_5">
+  <div class="container">
+    <h2>¿Desea trabajar con nosotros?</h2>
+    <p>
+      En DomestiGo, valoramos tanto a los clientes como a los trabajadores
+      domésticos que desean brindar sus servicios. DomestiGo ofrece las mejores
+      oportunidades laborales, completando un filtro que se requiere para
+      trabajar con nosotros. De esta forma, los clientes sentirán seguridad al
+      trabajar con usted.
+    </p>
+  </div>
+</section>
+<section id="trabajarcon">
+  <div class="container">
+    <h3>Datos de contacto</h3>
+    <input type="text" name="nombre2" id="nombre2" placeholder="Nombres*" />
+    <input
+      type="text"
+      name="apellido2"
+      id="apellido2"
+      placeholder="Apellidos*"
+    />
+    <br />
+    <br />
+    <input
+      type="text"
+      name="correo2"
+      id="correo2"
+      placeholder="Correo electrónico*"
+    />
+    <br />
+    <br />
+    <input
+      type="text"
+      name="telefono2"
+      id="telefono2"
+      placeholder="Teléfono*"
+    />
+    <input type="text" name="genero" id="genero" placeholder="Género*" />
+    <br />
+    <br />
+    <button>Enviar</button>
+    <div class="img-container"></div>
+  </div>
+</section>
+<section id="extra2">
+  <div class="container">
+    <h3>DomestiGo ya está disponible en las principales tiendas digitales</h3>
+    <br />
+    <p>
+      Nuestra aplicación se encuentra disponible en las principales tiendas
+      digitales como Play Store y App Store
+    </p>
+  </div>
+</section>
+<section id="ultimo">
+  <div class="container">
+    <img [src]="'assets/img/playstore-resize.png'" width="50" height="50" />
+    <br />
+    <button>Disponible en la Play Store</button>
+    <br />
+    <img [src]="'assets/img/appstore.png'" width="50" height="50" />
+    <br />
+    <button>Disponible en la App Store</button>
+    <h4>Síguenos en nuestras redes sociales</h4>
+    <div class="redes-sociales">
+      <img [src]="'assets/img/facebook.png'" width="50" height="50" />
+      <img [src]="'assets/img/instragram.png'" width="50" height="50" />
+      <img [src]="'assets/img/twitter-resize.png'" width="50" height="50" />
+      <img [src]="'assets/img/linkedin.png'" width="50" height="50" />
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="container">
+    <p>&copy; 2023 - HomeServe Connect - Política de Privacidad</p>
+  </div>
+</footer>

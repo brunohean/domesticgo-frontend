@@ -1,0 +1,57 @@
+<div class="container">
+  <div style="text-align: center; margin: 5%">
+    <h1>Registro de reservas</h1>
+  </div>
+
+  <div style="text-align: center; margin: 5%">
+    <form [formGroup]="form" (submit)="aceptar()">
+      <!-- formGroup es parte del import: ReactiveForms-->
+
+      <mat-form-field class="example-full-width" *ngIf="actualizamos">
+        <mat-label>ID</mat-label>
+        <input matInput formControlName="codigo" />
+
+        <mat-error *ngIf="form.get('codigo')?.hasError('required')">
+          El codigo es obligatorio! 7.7
+        </mat-error>
+      </mat-form-field>
+
+      <br />
+
+      <mat-form-field>
+        <mat-label>Fecha Reservada</mat-label>
+        <input
+          matInput
+          [matDatepicker]="picker"
+          formControlName="bookingDate"
+        />
+        <mat-datepicker-toggle
+          matIconSuffix
+          [for]="picker"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+        <mat-error *ngIf="form.get('bookingDate')?.hasError('required')">
+          La fecha de reserva es obligatoria 7.7 !!
+        </mat-error>
+      </mat-form-field>
+
+      <br />
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Detalle de la Reserva</mat-label>
+        <input
+          matInput
+          placeholder="Ingrese el detalle de la reserva"
+          formControlName="bookingDetail"
+        />
+        <mat-error *ngIf="form.get('bookingDetail')?.hasError('required')">
+          La fecha de reserva es obligatoria! 7.7
+        </mat-error>
+      </mat-form-field>
+
+      <br />
+
+      <button matButton="filled">Aceptar</button>
+    </form>
+  </div>
+</div>

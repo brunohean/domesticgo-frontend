@@ -1,0 +1,34 @@
+<div class="container">
+  <div style="text-align: center;margin: 5%;">
+    <h1>Registro de roles</h1>
+  </div>
+
+  <div style="text-align: center;margin: 5%;">
+    <form [formGroup]="form" (submit)="aceptar()"> <!-- formGroup es parte del import: ReactiveForms-->
+
+      <mat-form-field class="example-full-width" *ngIf="actualizamos">
+        <mat-label>ID</mat-label>
+        <input matInput  formControlName="codigo" />
+
+        <mat-error *ngIf="form.get('codigo')?.hasError('required')">
+          El codigo es obligatorio! 7.7
+        </mat-error>
+      </mat-form-field>
+
+      <br />
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Rol</mat-label>
+        <input matInput placeholder="Ingrese el Rol" formControlName="nameRol" />
+        <mat-error *ngIf="form.get('nameRol')?.hasError('required')">
+          El nombre del rol es obligatorio! 7.7
+        </mat-error>
+      </mat-form-field>
+
+      <br />
+
+      <button matButton="filled">Aceptar</button>
+    </form>
+  </div>
+</div>
+

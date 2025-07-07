@@ -1,0 +1,46 @@
+<div class="container">
+  <div style="text-align: center;margin: 5%;">
+    <h1>Registro de empleos</h1>
+  </div>
+
+  <div style="text-align: center;margin: 5%;">
+    <form [formGroup]="form" (submit)="aceptar()"> <!-- formGroup es parte del import: ReactiveForms-->
+
+      <mat-form-field class="example-full-width" *ngIf="edicion">
+        <mat-label>ID</mat-label>
+        <input matInput  formControlName="codigo" />
+
+        <mat-error *ngIf="form.get('codigo')?.hasError('required')">
+          El codigo es obligatorio! 7.7
+        </mat-error>
+      </mat-form-field>
+
+      <br />
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Empleo</mat-label>
+        <input matInput placeholder="Ingrese su Empleo" formControlName="nameEmpleo" />
+        <mat-error *ngIf="form.get('nameEmpleo')?.hasError('required')">
+          El nombre del empleo es obligatorio! 7.7
+        </mat-error>
+      </mat-form-field>
+
+      <br />
+      <!--
+      <mat-form-field>
+        <mat-label>Tipos</mat-label>
+        <mat-select formControlName="nombreEmpleo">
+            <!-el @for recorre la lista de  elementos del array de strings definidos en el .ts ->
+          @for (t of nomEmpleo; track t){
+          <mat-option [value]="t.value">{{ t.viewValue }}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+
+      <br />
+-->
+      <button matButton="filled">Aceptar</button>
+    </form>
+  </div>
+</div>
+

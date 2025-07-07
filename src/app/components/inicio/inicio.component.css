@@ -1,0 +1,241 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+h1{ font-size: 3em;}
+h2{ font-size: 1.9em;}
+h3{ font-size: 1.5em;}
+h4{ font-size: 1.5em;}
+p{ font-size: 1.2em;}
+body{
+    background-color: white;
+}
+button{
+    padding: 10px 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(0,0,0,0.5);
+    background-color: white;
+}
+button:hover{
+    background-color: rgb(106, 165, 188);
+}
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+header{
+    background-color: skyblue;
+}
+header .logo{
+    margin: 0;
+    padding: 25px 30px;
+    font-weight: bold;
+    color: white;
+    font-size: 1.8em;
+}
+header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+}
+header a{
+    padding: 5px 12px;
+    text-decoration: none;
+    color: black;
+}
+header a:hover{
+    color: white;
+}
+#hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+}
+#servicios{
+    background-color: skyblue;
+    text-align: center;
+}
+#servicios .container{
+    padding: 50px 20px;
+}
+#servicios .h4{
+    margin-top: 0;
+    font-size: 10em;
+}
+#servicios .carta{
+    background-position: center center;
+    background-size: cover;
+    height: 200px;
+    padding: 60px;
+    margin: 20px;
+    color: white;
+    border-radius: 15px;
+}
+.carta:first-child{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url(/assets/img/fontanero.jpg);
+}
+.carta:nth-child(2){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url(/assets/img/electricista.jpg);
+}
+.carta:nth-child(3){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url(/assets/img/servicio\ de\ limpieza.jpg);
+}
+.carta:nth-child(4){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url(/assets/img/carpintero.jpg);
+}
+#extra1{
+    background-color: white;
+}
+#extra1 .container{
+    text-align: center;
+    padding: 10px 20px;
+}
+#consultas{
+    background-color: white;
+    background-position: center center;
+    background-size: cover;
+}
+#consultas .container{
+    text-align: center;
+    background-color: skyblue;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 25px;
+}
+#extra1_5{
+    background-color: skyblue;
+}
+#extra1_5 .container{
+    text-align: center;
+    padding: 10px;
+    margin: 20px;
+}
+#trabajarcon{
+    background-color: white;
+    background-position: center center;
+    background-size: cover;
+}
+#trabajarcon .container{
+    text-align: center;
+    background-color: skyblue;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 25px;
+}
+
+#extra2{
+    background-color: white;
+}
+#extra2 .container{
+    text-align: center;
+    background-color: skyblue;
+    padding: 1px 10px;
+    border-radius: 20px;
+}
+
+#ultimo{
+    background-position: center center;
+    background-size: cover;
+}
+#ultimo .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+}
+
+footer{
+    background-color: skyblue;
+}
+footer p{
+    margin: 0;
+    padding: 10px;
+}
+footer .container{
+    height: 50px;
+    display: flex;
+    justify-content: left;
+    align-items: flex-end;
+}
+
+.redes-sociales {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+@media (min-width: 720px){
+    header{
+        position: fixed;
+        width: 100%;
+    }
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 5px;
+    }
+    #hero .img-container{
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        ), url(/assets/img/1.JPG);
+        background-size: cover;
+        background-position: left left;
+        height: 580px;
+        width: 1400px;
+    }
+    #hero .container{
+        display: flex;
+    }
+    #hero .texto1{
+        width: 50%;
+        max-width: 600px;
+        text-align: initial;
+        padding-left: 30px; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    
+}

@@ -1,0 +1,49 @@
+<div>
+  <div style="text-align: center; margin: 5%"><h1>Búsqueda de Reservas</h1></div>
+
+  <div style="text-align: center; margin: 5%">
+    <form>
+      <mat-form-field [formGroup]="form">
+        <mat-label>Fecha de Busqueda</mat-label>
+        <input
+          matInput
+          [matDatepicker]="picker"
+          formControlName="datePicker1"
+        />
+        <mat-datepicker-toggle
+          matIconSuffix
+          [for]="picker"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+        <mat-error *ngIf="form.get('datePicker1')?.hasError('required')">
+          La fecha de reserva es obligatoria 7.7 !!
+        </mat-error>
+      </mat-form-field>
+    </form>
+
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+      <!-- 1st Column -->
+      <ng-container matColumnDef="column1">
+        <th mat-header-cell *matHeaderCellDef>ID</th>
+        <td mat-cell *matCellDef="let element">{{ element.idReserva }}</td>
+      </ng-container>
+
+      <!-- 2nd Column -->
+      <ng-container matColumnDef="column2">
+        <th mat-header-cell *matHeaderCellDef>Fecha de Reserva</th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.fechaReserva | date : "dd/MM/yyyy" }}
+        </td>
+      </ng-container>
+
+      <!-- 3rd Column -->
+      <ng-container matColumnDef="column3">
+        <th mat-header-cell *matHeaderCellDef>Detalle de Reserva</th>
+        <td mat-cell *matCellDef="let element">{{ element.detalleReserva }}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+  </div>
+</div>
